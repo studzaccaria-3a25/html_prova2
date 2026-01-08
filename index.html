@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pagina con saluto</title>
+  <style>
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#f5f5f5; }
+    .card { background:#fff; padding:2rem 3rem; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08); text-align:center; max-width:520px; }
+    button { margin-top:1rem; padding:0.6rem 1rem; font-size:1rem; border-radius:8px; border:1px solid #ddd; background:#0078d4; color:#fff; cursor:pointer; }
+    button:active{ transform:translateY(1px) }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1 id="greeting">Ciao! Benvenuto/a.</h1>
+    <p>Questa è una semplice pagina con un saluto iniziale.</p>
+    <button id="showBtn">Mostra saluto</button>
+  </div>
+  <script>
+    document.getElementById('showBtn').addEventListener('click', function(){
+      const name = prompt('Come ti chiami?') || 'amico';
+      document.getElementById('greeting').textContent = `Ciao, ${name}! Benvenuto/a alla pagina.`;
+    });
+  </script>
+</body>
+</html>
